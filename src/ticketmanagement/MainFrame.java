@@ -1,0 +1,626 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package ticketmanagement;
+
+import com.toedter.calendar.JDateChooser;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Lenovo
+ */
+public class MainFrame extends javax.swing.JFrame {
+
+    private TabChangeListener tabChangeListener;
+    private CustomerHandling customerHandling;
+    private TicketHandling ticketHandling;
+    private BillsHandling billsHandling;
+
+    /**
+     * Creates new form MainFrame
+     */
+    public MainFrame() {
+        initComponents();
+        ticketHandling = new TicketHandling(this);
+        customerHandling = new CustomerHandling(this);
+        tabChangeListener = new TabChangeListener(this);
+        BillsHandling billsHandling = new BillsHandling(this);
+    }
+
+    //Add Actions Listener
+    //Customer Pane
+    public void addCustomerSaveBtnActionListener(ActionListener listener) {
+        customerSaveBtn.addActionListener(listener);
+    }
+
+    public void addCustomerEditBtnActionListener(ActionListener listener) {
+        customerEditBtn.addActionListener(listener);
+    }
+
+    public void addCustomerDBActionListener(ActionListener listener) {
+        customerSaveDB.addActionListener(listener);
+    }
+
+    //Ticket Pane
+    public void addTicketSortActionListener(ActionListener listener) {
+        createTicketSortByPrice.addActionListener(listener);
+    }
+
+    public void addTicketSaveBtnActionListener(ActionListener listener) {
+        createTicketSaveBtn.addActionListener(listener);
+    }
+
+    public void addTicketEditBtnActionListener(ActionListener listener) {
+        createTicketEditBtn.addActionListener(listener);
+    }
+
+    public void addTicketDBActionListener(ActionListener listener) {
+        createTicketSaveDB.addActionListener(listener);
+    }
+
+    //buy ticket pane
+    public void addBuyTicketAL(ActionListener listener) {
+        buyBtn.addActionListener(listener);
+    }
+
+    public void addBuySortMoneyAL(ActionListener listener) {
+        buyTicketSortmoney.addActionListener(listener);
+    }
+
+    public void addBuySortDateAL(ActionListener listener) {
+        buyTicketSortDate.addActionListener(listener);
+    }
+
+    public void addBuySaveDBAL(ActionListener listener) {
+        buyTicketSaveDB.addActionListener(listener);
+    }
+
+    //Variable providers, getter methods
+    public JDateChooser getBuyDate() {
+        return BuyDate;
+    }
+
+    public JTextField getBuyTicketCusID() {
+        return buyTicketCusID;
+    }
+
+    public JButton getBuyBtn() {
+        return buyBtn;
+    }
+
+    public JTable getBuyTable() {
+        return buyTable;
+    }
+
+    public JComboBox<String> getBuyTicketCB() {
+        return buyTicketCB;
+    }
+
+    public JTextField getBuyTicketID() {
+        return buyTicketID;
+    }
+
+    public JButton getBuyTicketSaveDB() {
+        return buyTicketSaveDB;
+    }
+
+    public JButton getBuyTicketSortDate() {
+        return buyTicketSortDate;
+    }
+
+    public JButton getBuyTicketSortmoney() {
+        return buyTicketSortmoney;
+    }
+
+    public JButton getCreateTicketSaveDB() {
+        return createTicketSaveDB;
+    }
+
+    public JButton getBuyTicketSaveToDB() {
+        return buyTicketSaveDB;
+    }
+
+    public JButton getCreateTicketEditBtn() {
+        return createTicketEditBtn;
+    }
+
+    public JTextField getCreateTicketPrice() {
+        return createTicketPrice;
+    }
+
+    public JButton getCreateTicketSaveBtn() {
+        return createTicketSaveBtn;
+    }
+
+    public JButton getCreateTicketSaveToDB() {
+        return createTicketSaveDB;
+    }
+
+    public JButton getCreateTicketSortByPrice() {
+        return createTicketSortByPrice;
+    }
+
+    public JTable getCreateTicketTable() {
+        return createTicketTable;
+    }
+
+    public JComboBox<String> getCreateTicketType() {
+        return createTicketType;
+    }
+
+    public JDateChooser getCustomerDob() {
+        return customerDob;
+    }
+
+    public JButton getCustomerEditBtn() {
+        return customerEditBtn;
+    }
+
+    public JTextField getCustomerName() {
+        return customerName;
+    }
+
+    public JButton getCustomerSaveBtn() {
+        return customerSaveBtn;
+    }
+
+    public JButton getCustomerSaveDB() {
+        return customerSaveDB;
+    }
+
+    public JTable getCustomerTable() {
+        return customerTable;
+    }
+
+    public JComboBox<String> getCustomerType() {
+        return customerType;
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        MainTabbedPane = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customerTable = new javax.swing.JTable();
+        customerDob = new com.toedter.calendar.JDateChooser();
+        customerType = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        customerName = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        customerSaveBtn = new javax.swing.JButton();
+        customerEditBtn = new javax.swing.JButton();
+        customerSaveDB = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        createTicketPrice = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        createTicketType = new javax.swing.JComboBox<>();
+        createTicketEditBtn = new javax.swing.JButton();
+        createTicketSaveBtn = new javax.swing.JButton();
+        createTicketSaveDB = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        createTicketTable = new javax.swing.JTable();
+        createTicketSortByPrice = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        buyTable = new javax.swing.JTable();
+        buyTicketSortmoney = new javax.swing.JButton();
+        buyTicketSortDate = new javax.swing.JButton();
+        buyTicketSaveDB = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        buyTicketID = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        buyTicketCB = new javax.swing.JComboBox<>();
+        buyBtn = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        buyTicketCusID = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        BuyDate = new com.toedter.calendar.JDateChooser();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        customerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id", "Name", "Date of Birth", "Type"
+            }
+        ));
+        jScrollPane1.setViewportView(customerTable);
+
+        customerType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Retail", "Team", "Online" }));
+
+        jLabel1.setText("DoB");
+
+        jLabel2.setText("Name");
+
+        customerName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerNameActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Type");
+
+        customerSaveBtn.setText("Save");
+
+        customerEditBtn.setText("Edit");
+        customerEditBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerEditBtnActionPerformed(evt);
+            }
+        });
+
+        customerSaveDB.setText("Save to Database(write to file)");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(customerSaveDB, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(customerType, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(customerDob, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(customerSaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(customerEditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(customerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(customerDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerSaveBtn)
+                    .addComponent(customerEditBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(customerSaveDB)
+                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+
+        MainTabbedPane.addTab("Create Customer", jPanel1);
+
+        jLabel4.setText("Price");
+
+        jLabel6.setText("Type");
+
+        createTicketType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economy", "Premium Economy", "Business", "First Class" }));
+
+        createTicketEditBtn.setText("Edit");
+        createTicketEditBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createTicketEditBtnActionPerformed(evt);
+            }
+        });
+
+        createTicketSaveBtn.setText("Save");
+
+        createTicketSaveDB.setText("Save to Database(write to file)");
+
+        createTicketTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Id", "Type", "Price"
+            }
+        ));
+        jScrollPane2.setViewportView(createTicketTable);
+
+        createTicketSortByPrice.setText("Sort by Price");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(createTicketSaveDB, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(createTicketType, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(createTicketPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(createTicketSaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(createTicketEditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(createTicketSortByPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createTicketType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(createTicketPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createTicketSaveBtn)
+                    .addComponent(createTicketEditBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(createTicketSortByPrice)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(createTicketSaveDB)
+                .addContainerGap())
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        );
+
+        MainTabbedPane.addTab("Create Ticket", jPanel2);
+
+        buyTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Date", "Customer_id", "Ticket_ID", "Number of tickets", "Price"
+            }
+        ));
+        jScrollPane4.setViewportView(buyTable);
+
+        buyTicketSortmoney.setText("Sort by total money");
+
+        buyTicketSortDate.setText("Sort by date");
+
+        buyTicketSaveDB.setText("Save to Database(write to file)");
+
+        jLabel5.setText("Select Ticket ID");
+
+        buyTicketID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buyTicketIDActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Select Number of Ticket");
+
+        buyTicketCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+
+        buyBtn.setText("Buy");
+
+        jLabel9.setText("Select Customer ID");
+
+        jLabel10.setText("Buy Date");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(buyTicketSortDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buyTicketSortmoney, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buyTicketSaveDB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buyTicketID, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(buyTicketCB, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BuyDate, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                            .addComponent(buyTicketCusID))
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel5)
+                        .addGap(2, 2, 2)
+                        .addComponent(buyTicketID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buyTicketCusID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BuyDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)))
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(buyTicketCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buyBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buyTicketSortDate)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buyTicketSortmoney)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buyTicketSaveDB)
+                        .addGap(7, 7, 7))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        MainTabbedPane.addTab("Buy Ticket", jPanel3);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainTabbedPane)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void customerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerNameActionPerformed
+        // DO add your handling code here:
+    }//GEN-LAST:event_customerNameActionPerformed
+
+    private void customerEditBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerEditBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerEditBtnActionPerformed
+
+    private void createTicketEditBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createTicketEditBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createTicketEditBtnActionPerformed
+
+    private void buyTicketIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buyTicketIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buyTicketIDActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainFrame().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser BuyDate;
+    private javax.swing.JTabbedPane MainTabbedPane;
+    private javax.swing.JButton buyBtn;
+    private javax.swing.JTable buyTable;
+    private javax.swing.JComboBox<String> buyTicketCB;
+    private javax.swing.JTextField buyTicketCusID;
+    private javax.swing.JTextField buyTicketID;
+    private javax.swing.JButton buyTicketSaveDB;
+    private javax.swing.JButton buyTicketSortDate;
+    private javax.swing.JButton buyTicketSortmoney;
+    private javax.swing.JButton createTicketEditBtn;
+    private javax.swing.JTextField createTicketPrice;
+    private javax.swing.JButton createTicketSaveBtn;
+    private javax.swing.JButton createTicketSaveDB;
+    private javax.swing.JButton createTicketSortByPrice;
+    private javax.swing.JTable createTicketTable;
+    private javax.swing.JComboBox<String> createTicketType;
+    private com.toedter.calendar.JDateChooser customerDob;
+    private javax.swing.JButton customerEditBtn;
+    private javax.swing.JTextField customerName;
+    private javax.swing.JButton customerSaveBtn;
+    private javax.swing.JButton customerSaveDB;
+    private javax.swing.JTable customerTable;
+    private javax.swing.JComboBox<String> customerType;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    // End of variables declaration//GEN-END:variables
+}

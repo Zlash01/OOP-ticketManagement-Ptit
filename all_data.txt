@@ -1,0 +1,4 @@
+Ticket,2,First Class,13244314
+Ticket,1,Economy,132
+Customer,1,dat,Wed Oct 11 09:02:12 ICT 2023,Retail
+Bill,1,1,Mon Oct 09 09:02:45 ICT 2023,3,396
